@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodCraft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="Css/mainPageStyles.css">
+</head>
+<body>
+    <header>
+        <img src="pics/RatLogo-removebg-preview.png" alt="FoodCraft Logo" class="logo" onclick="window.location.href='mainPage.html'">
+        <nav>
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="all-recipes.html">Recipes</a></li>
+                <li><a href="add-recipe.html">Add recipe</a></li>
+                <li><a href="CalorieCount.html">Calorie count</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+        <form role="search" class="search-form">
+            <input type="search" placeholder="Search recipes..." aria-label="Search recipes">
+            <button type="submit">Search</button>
+        </form>
+        <a href="login.html" class="sign-up">Sign Up/Log In</a>
+    </header>
+
+    <main>
+        <section class="vidContainer">
+            <video width="100%" autoplay loop muted plays-inline class="background-clip" id="videoShow">
+                <source src="pics/cooking2.mp4" type="video/mp4">
+            </video> 
+        </section>
+
+        <section class="slider" aria-label="Featured Recipes">
+            <div class="slider-header">
+                <h2 class="ArticleTag">Featured Recipes</h2>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="slider-container">
+                <!-- Recipes will be dynamically loaded here -->
+            </div>
+            <button class="prev" aria-label="Previous slide">&#10094;</button>
+            <button class="next" aria-label="Next slide">&#10095;</button>
+        </section>
+
+        <section class="slider" aria-label="Popular Recipes">
+            <div class="slider-header">
+                <h2 class="ArticleTag">Popular Recipes</h2>
+                <a href="#" class="view-more">View More →</a>
+            </div>
+            <div class="slider-container">
+                <!-- Recipes will be dynamically loaded here -->
+            </div>
+            <button class="prev" aria-label="Previous slide">&#10094;</button>
+            <button class="next" aria-label="Next slide">&#10095;</button>
+        </section>
+    </main>
+
+    <footer>
+        <article class="FooterElement">
+            <h3>About FoodCraft</h3>
+            <p>Discover delicious recipes, cooking tips, and culinary inspiration. FoodCraft is your ultimate destination for food lovers and home chefs.</p>
+        </article>
+        <article class="FooterElement">
+            <h3>Connect With Us</h3>
+            <p>Follow us on social media to stay updated with the latest recipes, cooking challenges, and foodie adventures.</p>
+        </article>
+        <article class="FooterElement">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter and get the best recipes, cooking tips, and exclusive content delivered straight to your inbox.</p>
+        </article>
+    </footer>
+
+    <script src="recipe-loader.js"></script>
+    <script>    
+        document.querySelectorAll('.slider').forEach(slider => {
+            const container = slider.querySelector('.slider-container');
+            const prevBtn = slider.querySelector('.prev');
+            const nextBtn = slider.querySelector('.next');
+
+            prevBtn.addEventListener('click', () => {
+                container.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                container.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
