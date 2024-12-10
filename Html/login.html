@@ -3,86 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About FoodCraft | Culinary Inspiration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="Css/mainPageStyles.css">
-    <link rel="stylesheet" href="Css/about.css">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="Html\Css\login.css">
 </head>
-<body>
-    <header>
-        <img src="pics/RatLogo-removebg-preview.png" alt="FoodCraft Logo" class="logo" onclick="window.location.href='mainPage.html'">
-        <nav>
-            <ul>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="all-recipes.html">Recipes</a></li>
-                <li><a href="add-recipe.html">Add recipe</a></li>
-                <li><a href="CalorieCount.html">Calorie count</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-        <form role="search" class="search-form">
-            <input type="search" placeholder="Search recipes..." aria-label="Search recipes">
-            <button type="submit">Search</button>
+<body>     
+    <section class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username or email" required>
+            <input type="password" placeholder="Password" required>
+            <fieldset class="remember-forgot">
+                <legend></legend>
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#" style="float:right;">Forgot password?</a>
+            </fieldset>
+            <button type="submit">Login</button>
         </form>
-        <a href="login.html" class="sign-up">Sign Up/Log In</a>
-    </header>
-
-    <main class="about-page">
-        <section class="about-hero">
-            <h1>Welcome to FoodCraft</h1>
-            <p>Inspiring culinary creativity, one recipe at a time</p>
-        </section>
-
-        <section class="about-mission">
-            <h2>Our Mission</h2>
-            <p>FoodCraft is more than just a recipe website. We're a community of passionate food lovers, home chefs, and culinary enthusiasts dedicated to sharing delicious recipes, cooking tips, and inspiring creativity in the kitchen.</p>
-        </section>
-
-        <section class="about-features">
-            <div class="feature">
-                <h3>Diverse Recipes</h3>
-                <p>From quick weeknight meals to gourmet weekend dishes, we've got recipes for every skill level and taste.</p>
-            </div>
-            <div class="feature">
-                <h3>Calorie Tracking</h3>
-                <p>Monitor your nutritional intake with our easy-to-use calorie counting tool.</p>
-            </div>
-            <div class="feature">
-                <h3>Community Driven</h3>
-                <p>Share your own recipes, tips, and connect with food lovers around the world.</p>
-            </div>
-        </section>
-
-        <section class="about-team">
-            <h2>Meet Our Team</h2>
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="images/camus.jpg" alt="Team Member 1">
-                    <h3>Albert Camus</h3>
-                    <p>Co-Founder</p>
-                </div>
-                <div class="team-member">
-                    <img src="images/Nietzsche.jpg" alt="Team Member 2">
-                    <h3>Nietzsche</h3>
-                    <p>Nutrition Expert</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <article class="FooterElement">
-            <h3>About FoodCraft</h3>
-            <p>Discover delicious recipes, cooking tips, and culinary inspiration. FoodCraft is your ultimate destination for food lovers and home chefs.</p>
-        </article>
-        <article class="FooterElement">
-            <h3>Connect With Us</h3>
-            <p>Follow us on social media to stay updated with the latest recipes, cooking challenges, and foodie adventures.</p>
-        </article>
-        <article class="FooterElement">
-            <h3>Newsletter</h3>
-            <p>Subscribe to our newsletter and get the best recipes, cooking tips, and exclusive content delivered straight to your inbox.</p>
-        </article>
-    </footer>
+        <p>
+            Don't have an account? <a href="#">Sign Up</a>
+        </p>
+    </section>
 </body>
 </html>
