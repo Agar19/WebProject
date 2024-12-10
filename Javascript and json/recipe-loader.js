@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     // Add click event to navigate to recipe detail
                     articleElement.addEventListener('click', () => {
-                        window.location.href = `recipe-detail.html?id=${recipe.id}`;
+                        window.location.href = `.recipe-detail.html?id=${recipe.id}`;
                     });
                     
                     container.appendChild(articleElement);
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to display recipe details on detail page
     async function displayRecipeDetails() {
-        const recipeDetailContainer = document.querySelector('.recipe-detail');
+        const recipeDetailContainer = document.querySelector('.recipe-details');
         if (recipeDetailContainer) {
             // Get recipe ID from URL
             const urlParams = new URLSearchParams(window.location.search);
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayRecipeCards();
     }
 
-    if (document.querySelector('.recipe-detail')) {
+    if (document.querySelector('.recipe-details')) {
         displayRecipeDetails();
     }
 });
